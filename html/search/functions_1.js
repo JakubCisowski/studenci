@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['dodajnakoniecrekurencyjnie_46',['dodajNaKoniecRekurencyjnie',['../_funkcje_8cpp.html#abae9e3335fb2ab97d675a75ad65b660d',1,'dodajNaKoniecRekurencyjnie(Grupa *&amp;pHead, int numer):&#160;Funkcje.cpp'],['../_funkcje_8cpp.html#a82683070bb832b186998a950b497bb01',1,'dodajNaKoniecRekurencyjnie(Student *&amp;pHead, string imie, string nazwisko, vector&lt; float &gt; oceny):&#160;Funkcje.cpp'],['../_funkcje_8h.html#abae9e3335fb2ab97d675a75ad65b660d',1,'dodajNaKoniecRekurencyjnie(Grupa *&amp;pHead, int numer):&#160;Funkcje.cpp'],['../_funkcje_8h.html#a82683070bb832b186998a950b497bb01',1,'dodajNaKoniecRekurencyjnie(Student *&amp;pHead, string imie, string nazwisko, vector&lt; float &gt; oceny):&#160;Funkcje.cpp']]],
+  ['dodajstudenta_47',['dodajStudenta',['../_funkcje_8cpp.html#a24e07a0946bcf052f0b20b754e646f88',1,'dodajStudenta(Grupa *&amp;pGrupa, Student *pStudent):&#160;Funkcje.cpp'],['../_funkcje_8h.html#a24e07a0946bcf052f0b20b754e646f88',1,'dodajStudenta(Grupa *&amp;pGrupa, Student *pStudent):&#160;Funkcje.cpp']]]
+];

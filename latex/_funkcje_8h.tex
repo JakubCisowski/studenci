@@ -1,0 +1,283 @@
+\hypertarget{_funkcje_8h}{}\doxysection{Funkcje.\+h File Reference}
+\label{_funkcje_8h}\index{Funkcje.h@{Funkcje.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}Struktury.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_funkcje_8h_ab550e5e29b50bc9bf22d9f4688a18fd2}{wczytaj\+Przelaczniki}} (int ile, char $\ast$params\mbox{[}$\,$\mbox{]}, string \&plik\+Grupy, string \&plik\+Statystyki, bool \&czy\+Usuwac, bool \&czy\+Bilans)
+\item 
+\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$ \mbox{\hyperlink{_funkcje_8h_af16f85876846d47dedb65cfbedab176c}{wczytaj\+Dane}} (string plik\+Grupy)
+\item 
+void \mbox{\hyperlink{_funkcje_8h_abae9e3335fb2ab97d675a75ad65b660d}{dodaj\+Na\+Koniec\+Rekurencyjnie}} (\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$\&p\+Head, int numer)
+\item 
+void \mbox{\hyperlink{_funkcje_8h_a82683070bb832b186998a950b497bb01}{dodaj\+Na\+Koniec\+Rekurencyjnie}} (\mbox{\hyperlink{struct_student}{Student}} $\ast$\&p\+Head, string imie, string nazwisko, vector$<$ float $>$ oceny)
+\item 
+void \mbox{\hyperlink{_funkcje_8h_ac5eac9a07f5691da0d7b4fa8a39682b6}{podwies\+Liste}} (\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$\&p\+Head\+Grupa, \mbox{\hyperlink{struct_student}{Student}} $\ast$\&p\+Head\+Student)
+\item 
+void \mbox{\hyperlink{_funkcje_8h_a2372a01ad02b1f3e85bce74a4a1f6afa}{zapisz\+Statystyki}} (\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$p\+Head, string plik\+Statystyki)
+\item 
+void \mbox{\hyperlink{_funkcje_8h_a28148770f13abdea3d16b635b41469cd}{zapisz\+Grupy}} (\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$p\+Head, string plik\+Grupy)
+\item 
+void \mbox{\hyperlink{_funkcje_8h_ae15a77c74d0242bdf4a3b632ef7217b4}{zal\+Usun}} (\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$\&p\+Head)
+\item 
+void \mbox{\hyperlink{_funkcje_8h_aa547544d64e42ae829513ecfb160e50b}{bilans}} (\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$\&p\+Head)
+\item 
+int \mbox{\hyperlink{_funkcje_8h_a597034ceb470859f25d96c05bd22ee20}{rozmiar\+Grupy}} (\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$p\+Grupa)
+\item 
+void \mbox{\hyperlink{_funkcje_8h_a24e07a0946bcf052f0b20b754e646f88}{dodaj\+Studenta}} (\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$\&p\+Grupa, \mbox{\hyperlink{struct_student}{Student}} $\ast$p\+Student)
+\item 
+int \mbox{\hyperlink{_funkcje_8h_ac25e5eb89b4c02f91564b3d56e6a098c}{policz\+Grupy}} (\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$p\+Head)
+\item 
+int \mbox{\hyperlink{_funkcje_8h_acb7be0144d95eb514d88189181d7c1b8}{policz\+Studentow}} (\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$p\+Head)
+\item 
+\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$ \mbox{\hyperlink{_funkcje_8h_a9d5a643b40246a10f7123f77aad64b0d}{najmniejsza\+Grupa}} (\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$p\+Head)
+\item 
+\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$ \mbox{\hyperlink{_funkcje_8h_a32bce7288d99bea54bd791803f13ac50}{najwieksza\+Grupa}} (\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$p\+Head)
+\item 
+void \mbox{\hyperlink{_funkcje_8h_ab0195c060a8855da12cb83b46a1f6446}{usun\+Grupe}} (\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$\&p\+Head, \mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$p\+Grupa)
+\item 
+void \mbox{\hyperlink{_funkcje_8h_aa534b004d44969afaaee7e789258a8d2}{zwolnij\+Pamiec}} (\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$\&p\+Head)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_funkcje_8h_aa547544d64e42ae829513ecfb160e50b}\label{_funkcje_8h_aa547544d64e42ae829513ecfb160e50b}} 
+\index{Funkcje.h@{Funkcje.h}!bilans@{bilans}}
+\index{bilans@{bilans}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{bilans()}{bilans()}}
+{\footnotesize\ttfamily void bilans (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$\&}]{p\+Head }\end{DoxyParamCaption})}
+
+Funkcja zmniejszajaca ilosc grup oraz przenoszaca studentow tak, by zmniejszyc te ilosc. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head} & Wskaznik na pierwszy element listy grup. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funkcje_8h_abae9e3335fb2ab97d675a75ad65b660d}\label{_funkcje_8h_abae9e3335fb2ab97d675a75ad65b660d}} 
+\index{Funkcje.h@{Funkcje.h}!dodajNaKoniecRekurencyjnie@{dodajNaKoniecRekurencyjnie}}
+\index{dodajNaKoniecRekurencyjnie@{dodajNaKoniecRekurencyjnie}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{dodajNaKoniecRekurencyjnie()}{dodajNaKoniecRekurencyjnie()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void dodaj\+Na\+Koniec\+Rekurencyjnie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$\&}]{p\+Head,  }\item[{int}]{numer }\end{DoxyParamCaption})}
+
+Funkcja dodajaca za pomoca rekurencji element na koniec listy grup. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head} & Wskaznik na pierwszy element listy grup. \\
+\hline
+{\em numer} & Numer grupy ktora dodajemy. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funkcje_8h_a82683070bb832b186998a950b497bb01}\label{_funkcje_8h_a82683070bb832b186998a950b497bb01}} 
+\index{Funkcje.h@{Funkcje.h}!dodajNaKoniecRekurencyjnie@{dodajNaKoniecRekurencyjnie}}
+\index{dodajNaKoniecRekurencyjnie@{dodajNaKoniecRekurencyjnie}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{dodajNaKoniecRekurencyjnie()}{dodajNaKoniecRekurencyjnie()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void dodaj\+Na\+Koniec\+Rekurencyjnie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_student}{Student}} $\ast$\&}]{p\+Head,  }\item[{string}]{imie,  }\item[{string}]{nazwisko,  }\item[{vector$<$ float $>$}]{oceny }\end{DoxyParamCaption})}
+
+Funkcja dodajaca za pomoca rekurencji element na koniec listy studentow. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head} & Wskaznik na pierwszy element listy studentow. \\
+\hline
+{\em imie} & Imie studenta. \\
+\hline
+{\em nazwisko} & Nazwisko studenta. \\
+\hline
+{\em oceny} & Wektor ocen studenta. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funkcje_8h_a24e07a0946bcf052f0b20b754e646f88}\label{_funkcje_8h_a24e07a0946bcf052f0b20b754e646f88}} 
+\index{Funkcje.h@{Funkcje.h}!dodajStudenta@{dodajStudenta}}
+\index{dodajStudenta@{dodajStudenta}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{dodajStudenta()}{dodajStudenta()}}
+{\footnotesize\ttfamily void dodaj\+Studenta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$\&}]{p\+Grupa,  }\item[{\mbox{\hyperlink{struct_student}{Student}} $\ast$}]{p\+Student }\end{DoxyParamCaption})}
+
+Funkcja dodajaca studenta do podanej grupy studentow. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Grupa} & Wskaznik na grupe do ktorej chcemy dodac studenta. \\
+\hline
+{\em p\+Student} & Wskaznik na studenta ktorego chcemy dodac do grupy. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funkcje_8h_a9d5a643b40246a10f7123f77aad64b0d}\label{_funkcje_8h_a9d5a643b40246a10f7123f77aad64b0d}} 
+\index{Funkcje.h@{Funkcje.h}!najmniejszaGrupa@{najmniejszaGrupa}}
+\index{najmniejszaGrupa@{najmniejszaGrupa}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{najmniejszaGrupa()}{najmniejszaGrupa()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_grupa}{Grupa}}$\ast$ najmniejsza\+Grupa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$}]{p\+Head }\end{DoxyParamCaption})}
+
+Funkcja zwracajaca grupe z najmniejsza iloscia studentow. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head} & Wskaznik na pierwszy element listy grup. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wskaznik na najmniej liczna grupe. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funkcje_8h_a32bce7288d99bea54bd791803f13ac50}\label{_funkcje_8h_a32bce7288d99bea54bd791803f13ac50}} 
+\index{Funkcje.h@{Funkcje.h}!najwiekszaGrupa@{najwiekszaGrupa}}
+\index{najwiekszaGrupa@{najwiekszaGrupa}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{najwiekszaGrupa()}{najwiekszaGrupa()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_grupa}{Grupa}}$\ast$ najwieksza\+Grupa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$}]{p\+Head }\end{DoxyParamCaption})}
+
+Funkcja zwracajaca grupe z najwieksza iloscia studentow ponizej 30 i nie jest jednoczesnie najmniejsza z grup. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head} & Wskaznik na pierwszy element listy grup. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wskaznik na najliczniejsza grupe ponizej 30 studentow nie bedaca jednoczesnie najmniejsza. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funkcje_8h_ac5eac9a07f5691da0d7b4fa8a39682b6}\label{_funkcje_8h_ac5eac9a07f5691da0d7b4fa8a39682b6}} 
+\index{Funkcje.h@{Funkcje.h}!podwiesListe@{podwiesListe}}
+\index{podwiesListe@{podwiesListe}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{podwiesListe()}{podwiesListe()}}
+{\footnotesize\ttfamily void podwies\+Liste (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$\&}]{p\+Head\+Grupa,  }\item[{\mbox{\hyperlink{struct_student}{Student}} $\ast$\&}]{p\+Head\+Student }\end{DoxyParamCaption})}
+
+Funkcja podwieszajaca liste studentow do ostatniej grupy z listy grup. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head\+Grupa} & Lista grup. \\
+\hline
+{\em p\+Head\+Student} & Lista studentow w danej grupie. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funkcje_8h_ac25e5eb89b4c02f91564b3d56e6a098c}\label{_funkcje_8h_ac25e5eb89b4c02f91564b3d56e6a098c}} 
+\index{Funkcje.h@{Funkcje.h}!policzGrupy@{policzGrupy}}
+\index{policzGrupy@{policzGrupy}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{policzGrupy()}{policzGrupy()}}
+{\footnotesize\ttfamily int policz\+Grupy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$}]{p\+Head }\end{DoxyParamCaption})}
+
+Funkcja wyznaczajaca ilosc grup. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head} & Wskaznik na pierwszy element listy grup. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ilosc grup. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funkcje_8h_acb7be0144d95eb514d88189181d7c1b8}\label{_funkcje_8h_acb7be0144d95eb514d88189181d7c1b8}} 
+\index{Funkcje.h@{Funkcje.h}!policzStudentow@{policzStudentow}}
+\index{policzStudentow@{policzStudentow}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{policzStudentow()}{policzStudentow()}}
+{\footnotesize\ttfamily int policz\+Studentow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$}]{p\+Head }\end{DoxyParamCaption})}
+
+Funkcja wyznaczajaca ilosc studentow. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head} & Wskaznik na pierwszy element listy grup. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ilosc studentow. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funkcje_8h_a597034ceb470859f25d96c05bd22ee20}\label{_funkcje_8h_a597034ceb470859f25d96c05bd22ee20}} 
+\index{Funkcje.h@{Funkcje.h}!rozmiarGrupy@{rozmiarGrupy}}
+\index{rozmiarGrupy@{rozmiarGrupy}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{rozmiarGrupy()}{rozmiarGrupy()}}
+{\footnotesize\ttfamily int rozmiar\+Grupy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$}]{p\+Grupa }\end{DoxyParamCaption})}
+
+Funkcja zliczajaca rozmiar grupy studentow. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Grupa} & Wskaznik na grupe ktora chcemy zliczyc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rozmiar podanej grupy. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funkcje_8h_ab0195c060a8855da12cb83b46a1f6446}\label{_funkcje_8h_ab0195c060a8855da12cb83b46a1f6446}} 
+\index{Funkcje.h@{Funkcje.h}!usunGrupe@{usunGrupe}}
+\index{usunGrupe@{usunGrupe}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{usunGrupe()}{usunGrupe()}}
+{\footnotesize\ttfamily void usun\+Grupe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$\&}]{p\+Head,  }\item[{\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$}]{p\+Grupa }\end{DoxyParamCaption})}
+
+Funkcja usuwajaca grupe z listy grup. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head} & Wskaznik na pierwszy element listy grup. \\
+\hline
+{\em p\+Grupa} & Wskaznik na grupe ktora chcemy usunac. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funkcje_8h_af16f85876846d47dedb65cfbedab176c}\label{_funkcje_8h_af16f85876846d47dedb65cfbedab176c}} 
+\index{Funkcje.h@{Funkcje.h}!wczytajDane@{wczytajDane}}
+\index{wczytajDane@{wczytajDane}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{wczytajDane()}{wczytajDane()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_grupa}{Grupa}}$\ast$ wczytaj\+Dane (\begin{DoxyParamCaption}\item[{string}]{plik\+Grupy }\end{DoxyParamCaption})}
+
+Funkcja wczytajaca dane z podanego pliku wejsciowego. 
+\begin{DoxyParams}{Parameters}
+{\em plik\+Grupy} & Plik wejsciowy opisujacy grupy studentow. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nowoutworzona lista grup. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funkcje_8h_ab550e5e29b50bc9bf22d9f4688a18fd2}\label{_funkcje_8h_ab550e5e29b50bc9bf22d9f4688a18fd2}} 
+\index{Funkcje.h@{Funkcje.h}!wczytajPrzelaczniki@{wczytajPrzelaczniki}}
+\index{wczytajPrzelaczniki@{wczytajPrzelaczniki}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{wczytajPrzelaczniki()}{wczytajPrzelaczniki()}}
+{\footnotesize\ttfamily bool wczytaj\+Przelaczniki (\begin{DoxyParamCaption}\item[{int}]{ile,  }\item[{char $\ast$}]{params\mbox{[}$\,$\mbox{]},  }\item[{string \&}]{plik\+Grupy,  }\item[{string \&}]{plik\+Statystyki,  }\item[{bool \&}]{czy\+Usuwac,  }\item[{bool \&}]{czy\+Bilans }\end{DoxyParamCaption})}
+
+Funkcja wczytujaca przelaczniki podane przez linie polecen. 
+\begin{DoxyParams}{Parameters}
+{\em ile} & Dlugosc tablicy z przelacznikami. \\
+\hline
+{\em params} & Tablica przelacznikow i ich argumentow. \\
+\hline
+{\em plik\+Grupy} & Plik wejsciowy opisujacy grupy studentow. \\
+\hline
+{\em plik\+Statystyki} & Plik ze statystykami na temat grup. \\
+\hline
+{\em czy\+Usuwac} & Zmienna okreslajaca czy uzytkownik chce usunac studentow ktorzy nie zaliczyli. \\
+\hline
+{\em czy\+Bilans} & Zmienna okreslajaca czy uzytkownik chce przeprowadzic bilans grup. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zwraca true jesli udalo sie poprawnie wczytac przelaczniki. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funkcje_8h_ae15a77c74d0242bdf4a3b632ef7217b4}\label{_funkcje_8h_ae15a77c74d0242bdf4a3b632ef7217b4}} 
+\index{Funkcje.h@{Funkcje.h}!zalUsun@{zalUsun}}
+\index{zalUsun@{zalUsun}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{zalUsun()}{zalUsun()}}
+{\footnotesize\ttfamily void zal\+Usun (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$\&}]{p\+Head }\end{DoxyParamCaption})}
+
+Funkcja usuwajaca z grup stundetow ktorzy nie uzyskali zaliczenia (mieli ocene ponizej 3). 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head} & Wskaznik na pierwszy element listy grup. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funkcje_8h_a28148770f13abdea3d16b635b41469cd}\label{_funkcje_8h_a28148770f13abdea3d16b635b41469cd}} 
+\index{Funkcje.h@{Funkcje.h}!zapiszGrupy@{zapiszGrupy}}
+\index{zapiszGrupy@{zapiszGrupy}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{zapiszGrupy()}{zapiszGrupy()}}
+{\footnotesize\ttfamily void zapisz\+Grupy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$}]{p\+Head,  }\item[{string}]{plik\+Grupy }\end{DoxyParamCaption})}
+
+Funkcja zapisujaca stan grup do pliku wejsciowego. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head} & Wskaznik na pierwszy element listy grup. \\
+\hline
+{\em plik\+Grupy} & Plik wejsciowy o nazwie podanej jako przelacznik. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funkcje_8h_a2372a01ad02b1f3e85bce74a4a1f6afa}\label{_funkcje_8h_a2372a01ad02b1f3e85bce74a4a1f6afa}} 
+\index{Funkcje.h@{Funkcje.h}!zapiszStatystyki@{zapiszStatystyki}}
+\index{zapiszStatystyki@{zapiszStatystyki}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{zapiszStatystyki()}{zapiszStatystyki()}}
+{\footnotesize\ttfamily void zapisz\+Statystyki (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$}]{p\+Head,  }\item[{string}]{plik\+Statystyki }\end{DoxyParamCaption})}
+
+Funkcja zapisujaca statystyki na temat grup do pliku o nazwie podanej jako przelacznik. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head} & Wskaznik na pierwszy element listy grup. \\
+\hline
+{\em plik\+Statystyki} & Plik ze statystykami na temat grup o naziwe podanej jako przelacznik. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funkcje_8h_aa534b004d44969afaaee7e789258a8d2}\label{_funkcje_8h_aa534b004d44969afaaee7e789258a8d2}} 
+\index{Funkcje.h@{Funkcje.h}!zwolnijPamiec@{zwolnijPamiec}}
+\index{zwolnijPamiec@{zwolnijPamiec}!Funkcje.h@{Funkcje.h}}
+\doxysubsubsection{\texorpdfstring{zwolnijPamiec()}{zwolnijPamiec()}}
+{\footnotesize\ttfamily void zwolnij\+Pamiec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grupa}{Grupa}} $\ast$\&}]{p\+Head }\end{DoxyParamCaption})}
+
+Funkcja usuwajaca z pamieci liste grup. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head} & Wskaznik na pierwszy element listy grup. \\
+\hline
+\end{DoxyParams}
